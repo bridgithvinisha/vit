@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accident Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 Accident Detection System</h1>
+        <div class="grid">
+            <label>Accel_X: <input type="number" id="Accel_X" value="0.5"></label>
+            <label>Accel_Y: <input type="number" id="Accel_Y" value="-0.2"></label>
+            <label>Accel_Z: <input type="number" id="Accel_Z" value="0.8"></label>
+            <label>Gyro_X: <input type="number" id="Gyro_X" value="0.1"></label>
+            <label>Gyro_Y: <input type="number" id="Gyro_Y" value="-0.5"></label>
+            <label>Gyro_Z: <input type="number" id="Gyro_Z" value="0.3"></label>
+            <label>Speed: <input type="number" id="Speed" value="60"></label>
+        </div>
+        <button onclick="predictAccident()">Predict Accident</button>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

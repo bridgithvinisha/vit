@@ -1,0 +1,16 @@
+import joblib
+from sklearn.linear_model import LogisticRegression
+from data_preprocessing import load_and_preprocess_data
+
+# Load and preprocess the dataset
+X_train, X_test, y_train, y_test, scaler = load_and_preprocess_data("../data/accident_data.csv")
+
+# Train Logistic Regression Model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Save Model and Scaler as .pkl files
+joblib.dump(model, "../models/accident_model.pkl")
+joblib.dump(scaler, "../models/scaler.pkl")
+
+print("✅ Model Training Complete! Model saved as 'accident_model.pkl'")
